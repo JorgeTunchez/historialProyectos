@@ -105,14 +105,13 @@ class login_view{
                                 <div class="card mb-3">
                                     <div class="card-body">
                                         <div class="pt-4 pb-2">
-                                            <h5 class="card-title text-center pb-0 fs-4">Ingrese a su cuenta</h5>
+                                            <h5 class="card-title text-center pb-0 fs-4">Ingreso</h5>
                                             <p class="text-center small">Ingrese su usuario y contraseña para iniciar sesión</p>
                                         </div>
                                         <form class="row g-3 needs-validation" id="frmLogin" method="POST" action="javascript:void(0);">
                                             <div class="col-12">
                                                 <label for="loginUsername" class="form-label">Usuario</label>
                                                 <div class="input-group has-validation">
-                                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
                                                     <input type="text" name="loginUsername" class="form-control" id="loginUsername" required>
                                                     <div class="invalid-feedback">Por favor ingrese el nombre de usuario.</div>
                                                 </div>

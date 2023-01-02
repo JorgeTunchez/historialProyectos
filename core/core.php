@@ -133,7 +133,8 @@ function getMenu(){
   return $arrMenu;
 }
 
-function drawHead(){
+function drawHead($isMenu){
+  $strClassToggle = ($isMenu)? "":"toggle-sidebar";
   ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -164,7 +165,7 @@ function drawHead(){
         <!-- Template Main CSS File -->
         <link href="assets/css/style.css" rel="stylesheet">
       </head>
-      <body>
+      <body class="<?php print $strClassToggle; ?>">
   <?php
 }
 
@@ -172,10 +173,10 @@ function drawHeader($strUsuario){
   ?>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+    <div class="d-flex align-items-center">
+      <a href="menu.php" class="logo d-flex align-items-center">
           <img src="assets/img/logo.png" alt="">
-          <span class="d-none d-lg-block">Historial Proyectos</span>
+          <span class="d-none d-lg-block">H.Proyectos</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div>
@@ -389,15 +390,17 @@ function drawFooter(){
       <!-- ======= Footer ======= -->
       <footer id="footer" class="footer">
           <div class="copyright">
-          &copy; Copyright <strong><span>HistorialProyectos</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>H. Proyectos</span></strong>. Todos los derechos reservados.
           </div>
           <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">HistorialProyectos</a>
+          Diseñado por H. Proyectos.
           </div>
-      </footer><!-- End Footer -->
+      </footer>
+      <!-- End Footer -->
 
       <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      
       <!-- Vendor JS Files -->
       <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
       <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -410,10 +413,6 @@ function drawFooter(){
 
       <!-- Template Main JS File -->
       <script src="assets/js/main.js"></script>
-
-    </body>
-
-  </html>
   <?php
 }
 

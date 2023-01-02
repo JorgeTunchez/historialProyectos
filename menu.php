@@ -79,8 +79,7 @@ class menu_model
     }
 }
 
-class menu_view
-{
+class menu_view{
 
     private $objModel;
     private $arrRolUser;
@@ -91,7 +90,7 @@ class menu_view
     }
 
     public function drawContent(){
-        drawHead();
+        drawHead(true);
             drawHeader($this->arrRolUser["NAME"]);
             drawMenu(); 
             ?>
@@ -763,8 +762,12 @@ class menu_view
 
             </main>
             <!-- End #main -->
+            <?php
+            drawFooter();
+            ?>
+            </body>
+        </html>
         <?php
-        drawFooter();
     }
 }
 
